@@ -1,6 +1,4 @@
-
 library(shiny)
-
 shinyUI(fluidPage(
     titlePanel("Predict Species from the below"),
     sidebarLayout(
@@ -20,4 +18,3 @@ shinyUI(fluidPage(
         )
     )
 )
-

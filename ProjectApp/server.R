@@ -4,9 +4,7 @@ library(randomForest)
 library(random)
 
 shinyServer(function(input, output) {
-    
     output$answer <- renderText({
-        
         model1 <- randomForest(Species ~ ., data = iris)
         Sepal.Length <- input$sliderSL
         Sepal.Width <- input$sliderSW
@@ -16,5 +14,4 @@ shinyServer(function(input, output) {
         answer <- predict(model1, newdata = sliderdata)
         answer <- as.character(answer)   
     })
-    
 })
